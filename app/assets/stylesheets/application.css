@@ -18,6 +18,8 @@
  *= require owl.carousel/dist/assets/owl.carousel.min
  *= require bootstrap-datepicker/dist/css/bootstrap-datepicker.min
  *= require style
+ *= require about
+ *= require jobs
  *= require font-awesome
  *= require_tree .
  *= require_self

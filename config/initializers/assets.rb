@@ -30,6 +30,7 @@ Rails.application.config.assets.paths << Rails.root.join('node_modules')
                                                    gallery/gallery-7.jpg
                                                    gallery/gallery-8.jpg
                                                    about.jpg
+                                                   about-1.jpg
                                                    apple-touch-icon.png
                                                    departments-1.jpg
                                                    departments-2.jpg
