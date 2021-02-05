@@ -29,6 +29,18 @@ Rails.application.config.assets.paths << Rails.root.join('node_modules')
                                                    gallery/gallery-6.jpg
                                                    gallery/gallery-7.jpg
                                                    gallery/gallery-8.jpg
+                                                   convenio/detran-go.png
+                                                   convenio/imas.png
+                                                   convenio/ipasgo.png
+                                                   convenio/saneago.png
+                                                   convenio/ssp.png
+                                                   convenio/sus.png
+                                                   diretoria/clara.jpg
+                                                   diretoria/andre.jpg
+                                                   diretoria/adriane.jpg
+                                                   diretoria/marcia.jpg
+                                                   diretoria/merquivania.jpg
+                                                   diretoria/alan.jpg
                                                    about.jpg
                                                    about-1.jpg
                                                    apple-touch-icon.png
