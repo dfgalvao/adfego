@@ -1,0 +1,2 @@
+module InformativoHelper
+end

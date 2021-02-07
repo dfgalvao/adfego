@@ -1,10 +1,11 @@
 Rails.application.routes.draw do
   
+  get 'informativo/faq'
   get 'institucional/sobre'
   get 'institucional/diretoria'
   get 'institucional/convenio'
   get 'institucional/estatuto'
-  get 'institucional/codigo_de_etica'
+  get 'institucional/codigo-de-etica'
 
   get 'home/index'
   root to: 'home#index'
