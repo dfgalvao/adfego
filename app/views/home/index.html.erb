@@ -1,5 +1,5 @@
 <!-- ======= Hero Section ======= -->
-  <section id="hero" class="d-flex align-items-center">
+  <section class="hero d-flex align-items-center">
    <div class="container">
       <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
         <ol class="carousel-indicators">
@@ -10,11 +10,8 @@
       <div class="carousel-inner">
         <div class="carousel-item active">
           <!--<img src="..." class="d-block w-100" alt="..."> -->
-          <%= image_tag "cer.jpg", class:"d-block w-100", alt:""%>
-          <div class="carousel-caption d-none d-md-block">
-            <h5>First slide label</h5>
-            <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-          </div>
+          <%= image_tag "adfego-40.jpg", class:"d-block w-100", alt:""%>
+          
         </div>
         <div class="carousel-item">
           <img src="..." class="d-block w-100" alt="...">
@@ -94,37 +91,37 @@
           </div>
 
           <div class="col-xl-7 col-lg-6 icon-boxes d-flex flex-column align-items-stretch justify-content-center py-5 px-lg-5">
-            <h3>Enim quis est voluptatibus aliquid consequatur fugiat</h3>
-            <p>Esse voluptas cumque vel exercitationem. Reiciendis est hic accusamus. Non ipsam et sed minima temporibus laudantium. Soluta voluptate sed facere corporis dolores excepturi. Libero laboriosam sint et id nulla tenetur. Suscipit aut voluptate.</p>
+            <h3>Quem somos?</h3>
+            <p>A instituição é de natureza jurídica que tem o objetivo de realizar uma mudança social, e que, as arrecadações e receitas são destinadas única e exclusivamente ao patrimônio da própria instituição, no caso, sem a finalidade de acumulação de capital.</p>
 
             <div class="icon-box">
               <div class="icon"><i class="bx bx-fingerprint"></i></div>
               <h4 class="title"><%= link_to "ADFEGO", institucional_sobre_path %></h4>
-              <p class="description">Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident</p>
+              <p class="description">Conheça a história da ADFEGO.</p>
             </div>
 
             <div class="icon-box">
               <div class="icon"><i class="bx bx-gift"></i></div>
               <h4 class="title"><%= link_to "Diretoria", institucional_diretoria_path %></h4>
-              <p class="description">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque</p>
+              <p class="description">Veja quem são os nossos gestores.</p>
             </div>
 
             <div class="icon-box">
               <div class="icon"><i class="bx bx-gift"></i></div>
               <h4 class="title"><%= link_to "Convênios", institucional_convenio_path %></h4>
-              <p class="description">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque</p>
+              <p class="description">Empresas que fazem parte na luta pela inclusão social.</p>
             </div>
 
             <div class="icon-box">
               <div class="icon"><i class="bx bx-gift"></i></div>
               <h4 class="title"><%= link_to "Estatuto", institucional_estatuto_path %></h4>
-              <p class="description">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque</p>
+              <p class="description">Conheça o nosso Estatuto.</p>
             </div>
 
             <div class="icon-box">
               <div class="icon"><i class="bx bx-atom"></i></div>
               <h4 class="title"><%= link_to "Código de Ética", institucional_codigo_de_etica_path %></a></h4>
-              <p class="description">Explicabo est voluptatum asperiores consequatur magnam. Et veritatis odit. Sunt aut deserunt minus aut eligendi omnis</p>
+              <p class="description">Nosso código de ética.</p>
             </div>
           </div>
         </div>
@@ -190,7 +187,7 @@
               <h4><a href="">Atendimento Domiciliar</a></h4>
               <p>Os atendimentos domiciliares acontecem de acordo com necessidades de todos os usuários, buscando interagir com os cuidadores e familiares na melhor forma de manter as rotinas.</p>
               <div class="text-center">
-                <a href="#" class="btn btn-primary">Learn More <i class="bx bx-chevron-right"></i></a>
+                <!--<a href="#" class="btn btn-primary">Learn More <i class="bx bx-chevron-right"></i></a> -->
               </div>
             </div>
           </div>
@@ -201,18 +198,18 @@
               <h4><a href="">Vagas de Empregos</a></h4>
               <p>Está em busca de recolocação no mercado de trabalho? Temos convênios com várias empresas que precisam de pessoas com o seu perfil para trabalhar, encontre uma vaga no seu perfil.</p>
               <div class="text-center">
-                <a href="#" class="btn btn-primary">Learn More <i class="bx bx-chevron-right"></i></a>
+                <!--<a href="#" class="btn btn-primary">Learn More <i class="bx bx-chevron-right"></i></a> -->
               </div>
             </div>
           </div>
 
           <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-lg-0">
             <div class="icon-box">
-              <div class="icon"><i class="fa fa-hospital"></i></div>
+              <div class="icon"><i class="fas fa-hospital-symbol"></i></div>
               <h4><a href="">Clinica Reabilitar</a></h4>
               <p>Os atendimentos são voltados a diversos tipos de diagnósticos, buscando atender as pessoas com deficiência física ou quadro álgicos, como, sequelas neurológicas e etc.</p>
               <div class="text-center">
-                <a href="#" class="btn btn-primary">Learn More <i class="bx bx-chevron-right"></i></a>
+                <!--<a href="#" class="btn btn-primary">Learn More <i class="bx bx-chevron-right"></i></a> -->
               </div>
             </div>
           </div>
@@ -223,23 +220,10 @@
               <h4><a href="">Oficina Mão na Roda</a></h4>
               <p>O objetivo da Oficina é promover consertos em Órteses ( Cadeiras de Rodas , muletas e andadores), para doações aos carentes e a comercialização preço de custo.</p>
               <div class="text-center">
-                <a href="#" class="btn btn-primary">Learn More <i class="bx bx-chevron-right"></i></a>
+                <!--<a href="#" class="btn btn-primary">Learn More <i class="bx bx-chevron-right"></i></a> -->
             </div>
             </div>
           </div>
-
-          <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4">
-            <div class="icon-box">
-              <div class="icon"><i class="icofont-disabled"></i></div>
-              <h4><a href="">Dele cardo</a></h4>
-              <p>Quis consequatur saepe eligendi voluptatem consequatur dolor consequuntur</p>
-              <div class="text-center">
-                <a href="#" class="btn btn-primary">Learn More <i class="bx bx-chevron-right"></i></a>
-            </div>
-            </div>
-          </div>
-        </div>
-
       </div>
     </section><!-- End Services Section -->
 
@@ -505,7 +489,7 @@
     </section> End Doctors Section -->
 
     <section id="faq">
-    <div class="jumbotron jumbotron-with-background"> <!-- home jumbotron Section -->
+    <div class="jumboindex jumbotron jumbotron-with-background"> <!-- home jumbotron Section -->
       <h2>Dúvidas?</h2>
        <!--<p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p> -->
       <hr class="my-4">
@@ -538,7 +522,6 @@
 
           <div class="testimonial-wrap">
             <div class="testimonial-item">
-              <img src="assets/img/testimonials/testimonials-2.jpg" class="testimonial-img" alt="">
               <!--<h3>Sara Wilsson</h3>
               <h4>Designer</h4>-->
              <p>
@@ -549,7 +532,6 @@
 
           <div class="testimonial-wrap">
             <div class="testimonial-item">
-              <img src="assets/img/testimonials/testimonials-3.jpg" class="testimonial-img" alt="">
               <!--<h3>Jena Karlis</h3>
               <h4>Store Owner</h4>-->
               <p>
@@ -560,5 +542,3 @@
         </div>
       </div>
     </section> <!-- End Testimonials Section -->
-
-    

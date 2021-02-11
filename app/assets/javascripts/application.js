@@ -21,5 +21,5 @@
 //= require counterup/jquery.counterup.min
 //= require owl.carousel/dist/owl.carousel.min
 //= require bootstrap-datepicker/dist/js/bootstrap-datepicker.min
-//= require main
+//= require main.js
 //= require_tree .

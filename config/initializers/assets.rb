@@ -36,6 +36,7 @@ Rails.application.config.assets.paths << Rails.root.join('node_modules')
                                                    convenio/saneago.png
                                                    convenio/ssp.png
                                                    convenio/sus.png
+                                                   diretoria/convenio.jpg
                                                    diretoria/diretoria.jpg
                                                    diretoria/clara.jpg
                                                    diretoria/andre.jpg
@@ -43,7 +44,10 @@ Rails.application.config.assets.paths << Rails.root.join('node_modules')
                                                    diretoria/marcia.jpg
                                                    diretoria/merquivania.jpg
                                                    diretoria/alan.jpg
+                                                   adfego-favicon.png
                                                    sobre.jpg
+                                                   logo.jpg
+                                                   adfego-40.jpg
                                                    cer.jpg
                                                    fraq.jpg
                                                    about-1.jpg

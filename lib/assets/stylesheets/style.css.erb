@@ -1,13 +1,13 @@
 /**
-* Template Name: Adfego 
-* Author: Daniel Galvao
-* License: 
+* Template Name: Medilab - v2.1.0
+* Template URL: https://bootstrapmade.com/medilab-free-medical-bootstrap-theme/
+* Author: BootstrapMade.com
+* License: https://bootstrapmade.com/license/
 */
 
 /*--------------------------------------------------------------
 # General
 --------------------------------------------------------------*/
-
 body {
   font-family: "Open Sans", sans-serif;
   color: #444444;
@@ -447,20 +447,39 @@ h1, h2, h3, h4, h5, h6 {
 /*--------------------------------------------------------------
 # Hero Section
 --------------------------------------------------------------*/
-#hero {
+.hero{
   width: 100%;
   height: 90vh;
-  <!--background: url(<%= asset_path("hero-bg.jpg")%>) top center;-->
+  <!--background: url("../img/hero-bg.jpg") top center;-->
   background-size: cover;
   position: relative;
   margin-bottom: -200px;
 }
+.hero-sobre{
+  background: url(<%= asset_path "diretoria/about-1.jpg"%>) top center;
+}
+.hero-diretoria{
+  background: url(<%= asset_path("hero-bg.jpg")%>) top center;
+}
 
-#hero .container {
+.hero-convenio{
+  background: url(<%= asset_path("diretoria/convenio.jpg")%>) top center;
+}
+.hero-estatuto{
+  background: url(<%= asset_path("diretoria/estatuto.jpg")%>) top center;
+}
+.hero-etica{
+  background: url(<%= asset_path("diretoria/estatuto.jpg")%>) top center;
+}
+.hero-faq{
+  background: url(<%= asset_path("fraq.png")%>) top center;
+}
+
+.hero .container {
   position: relative;
 }
 
-#hero h1 {
+.hero h1 {
   margin: 0;
   font-size: 48px;
   font-weight: 700;
@@ -469,13 +488,13 @@ h1, h2, h3, h4, h5, h6 {
   color: #2c4964;
 }
 
-#hero h2 {
+.hero h2 {
   color: #2c4964;
   margin: 10px 0 0 0;
   font-size: 24px;
 }
 
-#hero .btn-get-started {
+.hero .btn-get-started {
   font-family: "Raleway", sans-serif;
   text-transform: uppercase;
   font-weight: 500;
@@ -490,29 +509,29 @@ h1, h2, h3, h4, h5, h6 {
   background: #1977cc;
 }
 
-#hero .btn-get-started:hover {
+.hero .btn-get-started:hover {
   background: #3291e6;
 }
 
 @media (min-width: 1024px) {
-  #hero {
+  .hero {
     background-attachment: fixed;
   }
 }
 
 @media (max-width: 992px) {
-  #hero {
+  .hero {
     margin-bottom: 0;
     height: 100vh;
   }
-  #hero .container {
+  .hero .container {
     padding-bottom: 63px;
   }
-  #hero h1 {
+  .hero h1 {
     font-size: 28px;
     line-height: 36px;
   }
-  #hero h2 {
+  .hero h2 {
     font-size: 18px;
     line-height: 24px;
     margin-bottom: 30px;
@@ -520,7 +539,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 @media (max-height: 500px) {
-  #hero {
+  .hero {
     height: auto;
   }
 }
@@ -770,8 +789,7 @@ section {
 }
 
 .about .video-box {
-  background: url(<%= asset_path("about.jpg")%>) center center no-repeat;
-  background-repeat: no-repeat;
+  background: url(<%= asset_path 'about.jpg'%>) center center no-repeat;
   background-size: cover;
   min-height: 500px;
 }
@@ -1418,91 +1436,18 @@ section {
 /*--------------------------------------------------------------
 # Gallery
 --------------------------------------------------------------*/
-* {
-  box-sizing: border-box;
+.gallery .gallery-item {
+  overflow: hidden;
+  border-right: 3px solid #fff;
+  border-bottom: 3px solid #fff;
 }
 
-/* Position the image container (needed to position the left and right arrows) */
-.container {
-  position: relative;
+.gallery .gallery-item img {
+  transition: all ease-in-out 0.4s;
 }
 
-/* Hide the images by default */
-.mySlides {
-  display: none;
-}
-
-/* Add a pointer when hovering over the thumbnail images */
-.cursor {
-  cursor: pointer;
-}
-
-/* Next & previous buttons */
-.prev,
-.next {
-  cursor: pointer;
-  position: absolute;
-  top: 40%;
-  width: auto;
-  padding: 16px;
-  margin-top: -50px;
-  color: white;
-  font-weight: bold;
-  font-size: 20px;
-  border-radius: 0 3px 3px 0;
-  user-select: none;
-  -webkit-user-select: none;
-}
-
-/* Position the "next button" to the right */
-.next {
-  right: 0;
-  border-radius: 3px 0 0 3px;
-}
-
-/* On hover, add a black background color with a little bit see-through */
-.prev:hover,
-.next:hover {
-  background-color: rgba(0, 0, 0, 0.8);
-}
-
-/* Number text (1/3 etc) */
-.numbertext {
-  color: #f2f2f2;
-  font-size: 12px;
-  padding: 8px 12px;
-  position: absolute;
-  top: 0;
-}
-
-/* Container for image text */
-.caption-container {
-  text-align: center;
-  background-color: #222;
-  padding: 2px 16px;
-  color: white;
-}
-
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
-/* Six columns side by side */
-.column {
-  float: left;
-  width: 16.66%;
-}
-
-/* Add a transparency effect for thumnbail images */
-.demo {
-  opacity: 0.6;
-}
-
-.active,
-.demo:hover {
-  opacity: 1;
+.gallery .gallery-item:hover img {
+  transform: scale(1.1);
 }
 
 /*--------------------------------------------------------------
@@ -1812,8 +1757,26 @@ section {
 }
 
 section .jumbotron-with-background{
+background: url(<%= asset_path("fraq.png")%>);
+background-position:center;
+background-repeat: no-repeat;
+background-size: cover;
+}
+.jumboindex{
   background: url(<%= asset_path("fraq.png")%>);
-  background-position:center;
-  background-repeat: no-repeat;
-  background-size: cover;
+}
+.jumboabout{
+  background: url(<%= asset_path("diretoria/about-1.jpg")%>);
+}
+.jumbodiretor{
+  background: url(<%= asset_path("diretoria/diretoria.jpg")%>);
+}
+.jumboconvenio{
+  background: url(<%= asset_path("diretoria/convenio.jpg")%>);
+}
+.jumbotron-with-background-estatuto{
+  background: url(<%= asset_path("diretoria/diretoria.jpg")%>);
+}
+.jumbotron-with-background-etica{
+  background: url(<%= asset_path("diretoria/diretoria.jpg")%>);
 }

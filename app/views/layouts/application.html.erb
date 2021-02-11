@@ -1,17 +1,16 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Adfego</title>
+    <title>ADFEGO | Associação dos Deficientes Fisicos do Estado de Goiás</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
+
+    <%=favicon_link_tag 'adfego-favicon.png'%>
     
-     
     <%= stylesheet_link_tag'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
     
   </head>
-
-  <body>
   <body>
 
   <!-- ======= Top Bar ======= -->
@@ -36,9 +35,9 @@
   <header id="header" class="fixed-top">
     <div class="container d-flex align-items-center">
 
-      <h1 class="logo mr-auto"><%= link_to "ADFEGO", home_index_path  %></h1>
+      <!--<h1 class="logo mr-auto"><%= link_to "ADFEGO", home_index_path  %></h1> -->
       <!-- Uncomment below if you prefer to use an image logo -->
-      <!-- <a href="index.html" class="logo mr-auto"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+      <a href="index.html" class="logo mr-auto"><%= image_tag"logo.jpg", alt:"", class:"img-fluid"%></a>
 
       <nav class="nav-menu d-none d-lg-block">
         <ul>
@@ -65,8 +64,8 @@
           <li><a href="#services">Serviços</a></li>
           <li><a href="#departments">Deficiências</a></li>          
           <li><a href="#faq">Informativo</a></li>
-          <li> <%= link_to "Vagas de Emprego"%></li>
-          <li><a href="#contact">Contact</a></li>
+          <li> <%= link_to "Vagas de Emprego", companies_path %></li>
+          <li><a href="#contact">Contato</a></li>
 
         </ul>
       </nav><!-- .nav-menu -->
@@ -150,13 +149,13 @@
       <div class="container">
 
         <div class="section-title">
-          <h2>Contact</h2>
-          <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
+          <h2>Contato</h2>
+          <p>Nosso atendimento é das 08:00h às 12:00h e das 13:00h às 17:00h de segunda a sexta-feira.</p>
         </div>
       </div>
 
       <div>
-        <iframe style="border:0; width: 100%; height: 350px;" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12097.433213460943!2d-74.0062269!3d40.7101282!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xb89d1fe6bc499443!2sDowntown+Conference+Center!5e0!3m2!1smk!2sbg!4v1539943755621" frameborder="0" allowfullscreen></iframe>
+        <iframe style="border:0; width: 100%; height: 350px;" src="https://www.google.com/maps/place/ADFEGO+-+Associa%C3%A7%C3%A3o+dos+Deficientes+F%C3%ADsicos+do+Estado+de+Goi%C3%A1s/@-16.6604091,-49.2511816,17z/data=!3m1i4b1i4m5i3m4i1s0x935ef23283434975:0x34e5d536901d1a2f!8m2!3d-16.6604143!4d-49.2489929?hl=pt-BR" frameborder="0" allowfullscreen></iframe>
       </div>
 
       <div class="container">
@@ -166,20 +165,21 @@
             <div class="info">
               <div class="address">
                 <i class="icofont-google-map"></i>
-                <h4>Location:</h4>
-                <p>A108 Adam Street, New York, NY 535022</p>
+                <h4>Localização:</h4>
+                <p>Avenida Independência, N° 3026, St. Leste Vila Nova,<br/> CEP.: 74645-010</p>
               </div>
 
               <div class="email">
                 <i class="icofont-envelope"></i>
                 <h4>Email:</h4>
-                <p>info@example.com</p>
+                <p>adfego@adfego.org.br | <br/>
+                   presidencia@adfego.org.br</p>
               </div>
 
               <div class="phone">
                 <i class="icofont-phone"></i>
-                <h4>Call:</h4>
-                <p>+1 5589 55488 55s</p>
+                <h4>Fone:</h4>
+                <p>(62) 3202-3313</p>
               </div>
 
             </div>
@@ -191,20 +191,20 @@
             <form action="forms/contact.php" method="post" role="form" class="php-email-form">
               <div class="form-row">
                 <div class="col-md-6 form-group">
-                  <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
+                  <input type="text" name="name" class="form-control" id="name" placeholder="Seu nome" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
                   <div class="validate"></div>
                 </div>
                 <div class="col-md-6 form-group">
-                  <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" data-rule="email" data-msg="Please enter a valid email" />
+                  <input type="email" class="form-control" name="email" id="email" placeholder="Seu e-mail" data-rule="email" data-msg="Please enter a valid email" />
                   <div class="validate"></div>
                 </div>
               </div>
               <div class="form-group">
-                <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
+                <input type="text" class="form-control" name="subject" id="subject" placeholder="Assunto" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
                 <div class="validate"></div>
               </div>
               <div class="form-group">
-                <textarea class="form-control" name="message" rows="5" data-rule="required" data-msg="Please write something for us" placeholder="Message"></textarea>
+                <textarea class="form-control" name="message" rows="5" data-rule="required" data-msg="Please write something for us" placeholder="Mensagem"></textarea>
                 <div class="validate"></div>
               </div>
               <div class="mb-3">
