@@ -1,5 +1,6 @@
 class CompaniesController < ApplicationController
   before_action :set_company, only: %w[ show edit update destroy ]
+  
 
   # GET /companies
   # GET /companies.json

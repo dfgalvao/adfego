@@ -1,0 +1,63 @@
+<%= form_with(model: vacancy, local: true) do |form| %>
+  <% if vacancy.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(vacancy.errors.count, "error") %> prohibited this vacancy from being saved:</h2>
+
+      <ul>
+      <% vacancy.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+  <br/><br/><br/>
+  
+  <div class="field">
+    <%= form.label :code %>
+    <%= form.text_field :code %>
+  </div>
+
+  <div class="field">
+    <%= form.label :title %>
+    <%= form.text_field :title %>
+  </div>
+
+  <div class="field">
+    <%= form.label :description %>
+    <%= form.text_area :description %>
+  </div>
+
+  <div class="field">
+    <%= form.label :schooling %>
+    <%= form.text_field :schooling %>
+  </div>
+
+  <div class="field">
+    <%= form.label :quantity %>
+    <%= form.number_field :quantity %>
+  </div>
+
+  <div class="field">
+    <%= form.label :remuneration %>
+    <%= form.text_field :remuneration %>
+  </div>
+
+  <div class="field">
+    <%= form.label :benefit %>
+    <%= form.text_area :benefit %>
+  </div>
+
+  <div class="field">
+    <%= form.label :workload %>
+    <%= form.text_field :workload %>
+  </div>
+
+  <div class="field">
+    <%= form.label :company_id %>
+    <%= form.collection_select(:company_id, @company, :id, :name, prompt: true)%>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

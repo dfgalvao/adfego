@@ -46,6 +46,7 @@ Rails.application.config.assets.paths << Rails.root.join('node_modules')
                                                    diretoria/alan.jpg
                                                    adfego-favicon.png
                                                    sobre.jpg
+                                                   vagas-de-emprego.jpg
                                                    logo.jpg
                                                    adfego-40.jpg
                                                    cer.jpg

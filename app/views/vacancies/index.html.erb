@@ -1,0 +1,58 @@
+<p id="notice"><%= notice %></p>
+
+<!-- ======= Hero Section ======= 
+  <section class="hero hero-vagas d-flex align-items-center">
+    <div class="container">
+      <h1>Vagas de Emprego</h1>
+      <h2>We are team of talanted designers making websites with Bootstrap</h2>
+    </div>
+  </section>  End Hero -->
+  <br/><br/><br/><br/>
+
+<main id="main">
+  <!-- ======= Work Section ======= -->
+    <div class="container">
+      <div class="section-title">
+        <h2>Vagas de Emprego</h2>
+        <p>Caso encontre alguma vaga de seu interesse entre em contato conosco.</p>
+      </div>
+
+      <table class="table table-hover">
+        <thead class="thead-dark">
+          <tr>
+            <th scope="col">Code</th>
+            <th scope="col">Title</th>
+            <th scope="col">description</th>
+            <th scope="col">Schooling</th>
+            <th scope="col">Quantity</th>
+            <th scope="col">Remuneration</th>
+            <th scope="col">Benefit</th>
+            <th scope="col">Workload</th>
+            <!--<th scope="col">Company</th> -->
+          </tr>
+        </thead>
+        <tbody>
+          <% @vacancies.each do |vacancy| %>
+            <tr>
+              <td><%= vacancy.code %></td>
+              <td><%= vacancy.title %></td>
+              <td><%= vacancy.description %></td>
+              <td><%= vacancy.schooling %></td>
+              <td><%= vacancy.quantity %></td>
+              <td><%= vacancy.remuneration %></td>
+              <td><%= vacancy.benefit %></td>
+              <td><%= vacancy.workload %></td>
+              <td><%= vacancy.company.name %></td>
+              <td><%= link_to 'Show', vacancy %></td>
+              <td><%= link_to 'Edit', edit_vacancy_path(vacancy) %></td>
+              <td><%= link_to 'Destroy', vacancy, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+            </tr>
+          <% end %>
+        </tbody>
+      </table>
+      <%= link_to 'New Vacancy', new_vacancy_path %>
+    </div>
+</main>
+
+
+

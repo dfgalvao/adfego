@@ -64,14 +64,13 @@
           <li><a href="#services">Serviços</a></li>
           <li><a href="#departments">Deficiências</a></li>          
           <li><a href="#faq">Informativo</a></li>
-          <li> <%= link_to "Vagas de Emprego", companies_path %></li>
+          <li> <%= link_to "Vagas de Emprego", vacancies_path %></li>
           <li><a href="#contact">Contato</a></li>
 
         </ul>
       </nav><!-- .nav-menu -->
-
-      <!--<a href="#appointment" class="appointment-btn scrollto">Make an Appointment</a> -->
-
+      
+      <%= link_to "Área do Adm", admin_index_path, class:"appointment-btn scrollto" %>
     </div>
   </header><!-- End Header -->
 
