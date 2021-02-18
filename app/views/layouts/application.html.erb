@@ -39,8 +39,7 @@
 
       <!--<h1 class="logo mr-auto"><%= link_to "ADFEGO", home_index_path  %></h1> -->
       <!-- Uncomment below if you prefer to use an image logo -->
-      <a href="#" class="logo mr-auto"><%= image_tag("logo.jpg", alt:"", class:"logo mr-auto")%></a>
-
+      <%= link_to image_tag("logo.jpg", alt:"", class:"img-fluid"),home_index_path, class:"logo mr-auto"%>
       <nav class="nav-menu d-none d-lg-block">
         <ul>
           <li> <%= link_to "Home", home_index_path %></li>
@@ -57,22 +56,20 @@
                   <li><a href="#">Deep Drop Down 6</a></li>
                 </ul>
               </li>
-              <li><a href="#">Diretoria</a></li>
-              <li><a href="#">Convênios</a></li>
-              <li><a href="#">Estatuto</a></li>
-              <li><a href="#">Código de Ética</a></li>
             </ul>-->
           
           <li><a href="#services">Serviços</a></li>
           <li><a href="#departments">Deficiências</a></li>          
           <li><a href="#faq">Informativo</a></li>
           <li> <%= link_to "Vagas de Emprego", vacancies_path %></li>
+          <li> <%= link_to "Doar", home_index_path %></li>
+          <li> <%= link_to "Ouvidoria", home_index_path %></li>
           <li><a href="#contact">Contato</a></li>
 
         </ul>
       </nav><!-- .nav-menu -->
       
-      <%= link_to "Área do Adm", admin_index_path, class:"appointment-btn scrollto" %>
+      <%= link_to "Área do Admin", admin_index_path, class:"appointment-btn scrollto" %>
     </div>
   </header><!-- End Header -->
 
@@ -99,20 +96,20 @@
           <div class="col-lg-4">
             <div class="info">
               <div class="address">
-                <i class="icofont-google-map"></i>
+                <i class="fa fa-map-signs"></i>
                 <h4>Localização:</h4>
                 <p>Avenida Independência, N° 3026, St. Leste Vila Nova,<br/> CEP.: 74645-010</p>
               </div>
 
               <div class="email">
-                <i class="icofont-envelope"></i>
+               <i class="fa fa-envelope"></i>
                 <h4>Email:</h4>
                 <p>adfego@adfego.org.br | <br/>
                    presidencia@adfego.org.br</p>
               </div>
 
               <div class="phone">
-                <i class="icofont-phone"></i>
+                <i class="fa fa-phone"></i>
                 <h4>Fone:</h4>
                 <p>(62) 3202-3313</p>
               </div>
@@ -149,18 +146,14 @@
               </div>
               <div class="text-center"><button type="submit">Send Message</button></div>
             </form>
-
           </div>
-
         </div>
-
       </div>
     </section><!-- End Contact Section -->
   </main><!-- End #main -->
 
   <!-- ======= Footer ======= -->
   <footer id="footer">
-
     <div class="footer-top">
       <div class="container">
         <div class="row">
@@ -214,7 +207,7 @@
 
       <div class="mr-md-auto text-center text-md-left">
         <div class="copyright">
-          &copy; Copyright <strong><span>Adfego</span></strong>. Todos os direitos reservados.
+          &copy;<strong><span> 2020-2021 ADFEGO</span></strong> — Todos os direitos reservados.
         </div>
       </div>
       <div class="social-links text-center text-md-right pt-3 pt-md-0">
