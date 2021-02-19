@@ -48,6 +48,7 @@ Rails.application.config.assets.paths << Rails.root.join('node_modules')
                                                    sobre.jpg
                                                    vagas-de-emprego.jpg
                                                    logo.jpg
+                                                   caixa.png
                                                    adfego-40.jpg
                                                    cer.jpg
                                                    fraq.jpg
