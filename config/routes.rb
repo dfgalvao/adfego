@@ -1,18 +1,19 @@
 Rails.application.routes.draw do
   
+  
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
   get 'admin/index'
   devise_for :users
   resources :users
   resources :vacancies
   resources :companies
-  get 'doar/doe'
   get 'informativo/faq'
   get 'institucional/sobre'
   get 'institucional/diretoria'
   get 'institucional/convenio'
   get 'institucional/estatuto'
   get 'institucional/codigo-de-etica'
+  get 'doar/doe'
   
   
   get 'home/index'

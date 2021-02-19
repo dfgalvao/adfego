@@ -1,4 +1,4 @@
 class DoarController < ApplicationController
-    def doe
-    end
+  def doe
+  end
 end
