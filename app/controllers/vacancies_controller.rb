@@ -6,6 +6,7 @@ class VacanciesController < ApplicationController
   # GET /vacancies.json
   def index
     @vacancies = Vacancy.all
+
   end
 
   # GET /vacancies/1

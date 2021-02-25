@@ -43,28 +43,21 @@
       <nav class="nav-menu d-none d-lg-block">
         <ul>
           <li> <%= link_to "Home", home_index_path %></li>
-          <li><a href="#about">Institucional</a></li>
-            <!--<ul>
-              <li><a href="#">A ADFEGO</a></li>
-              <li class="drop-down"><a href="#">Deep Drop Down</a>
-                <ul>
-                  <li><a href="#">Deep Drop Down 1</a></li>
-                  <li><a href="#">Deep Drop Down 2</a></li>
-                  <li><a href="#">Deep Drop Down 3</a></li>
-                  <li><a href="#">Deep Drop Down 4</a></li>
-                  <li><a href="#">Deep Drop Down 5</a></li>
-                  <li><a href="#">Deep Drop Down 6</a></li>
-                </ul>
-              </li>
-            </ul>-->
-          
-          <li><a href="#services">Serviços</a></li>
-          <li><a href="#departments">Deficiências</a></li>          
-          <li><a href="#faq">Informativo</a></li>
+          <li> <%= link_to "Institucional", home_index_path(anchor:"about", :popup => ['dialog about','toolbar=no,location=no,directories=no,status=no,menubar=no,scrollbars=yes,resizable=yes']
+          ) %></li> 
+          <li><%= link_to "Serviços", home_index_path(anchor:"services", :popup => ['dialog services','toolbar=no,location=no,directories=no,status=no,menubar=no,scrollbars=yes,resizable=yes']
+          ) %></li>
+          <li><%= link_to "Deficiências", home_index_path(anchor:"departments", :popup => ['dialog departments','toolbar=no,location=no,directories=no,status=no,menubar=no,scrollbars=yes,resizable=yes']
+          ) %></li>
+          <li><%= link_to "Informativo", home_index_path(anchor:"faq", :popup => ['dialog faq','toolbar=no,location=no,directories=no,status=no,menubar=no,scrollbars=yes,resizable=yes']
+          ) %></li>
+        
           <li> <%= link_to "Vagas de Emprego", vacancies_path %></li>
           <li> <%= link_to "Doar", doar_doe_path %></li>
           <li> <%= link_to "Ouvidoria", home_index_path %></li>
-          <li><a href="#contact">Contato</a></li>
+          <li><%= link_to "Contato", home_index_path(anchor:"contact", :popup => ['dialog contact','toolbar=no,location=no,directories=no,status=no,menubar=no,scrollbars=yes,resizable=yes']
+          ) %></li>
+          
 
         </ul>
       </nav><!-- .nav-menu -->
@@ -207,7 +200,7 @@
 
       <div class="mr-md-auto text-center text-md-left">
         <div class="copyright">
-          &copy;<strong><span> 2020-2021 ADFEGO</span></strong> — Todos os direitos reservados.
+          &copy;<strong><span> 2021 ADFEGO</span></strong> — Todos os direitos reservados.
         </div>
       </div>
       <div class="social-links text-center text-md-right pt-3 pt-md-0">

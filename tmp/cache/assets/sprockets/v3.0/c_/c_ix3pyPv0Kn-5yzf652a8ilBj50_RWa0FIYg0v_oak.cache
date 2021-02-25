@@ -1,0 +1,9 @@
+I"è(function() {
+  jQuery(function() {
+    return $('#vacancies').dataTable({
+      sPaginationType: "full_numbers"
+    });
+  });
+
+}).call(this);
+:ET

@@ -12,7 +12,6 @@
 //
 //= require rails-ujs
 //= require activestorage
-//= require turbolinks
 //= require jquery/dist/jquery
 //= require bootstrap/dist/js/bootstrap.bundle.min.js
 //= require jquery-easing/jquery.easing.1.3
@@ -23,3 +22,4 @@
 //= require bootstrap-datepicker/dist/js/bootstrap-datepicker.min
 //= require main.js
 //= require_tree .
+

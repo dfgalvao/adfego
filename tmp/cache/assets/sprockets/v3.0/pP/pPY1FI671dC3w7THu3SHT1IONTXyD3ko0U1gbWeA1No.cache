@@ -1,0 +1,19 @@
+I"è(function() {
+  $('.datatable').DataTable({
+    dom: "<'row-fluid'<'span6'l><'span6'f>r>t<'row-fluid'<'span6'i><'span6'p>>",
+    pagingType: "bootstrap"
+  });
+
+  $('.datatable').DataTable({
+    dom: "<'row'<'span6'l><'span6'f>r>t<'row'<'span6'i><'span6'p>>",
+    pagingType: "bootstrap"
+  });
+
+  $('.datatable').DataTable({});
+
+  $('#example').DataTable({
+    responsive: true
+  });
+
+}).call(this);
+:ET

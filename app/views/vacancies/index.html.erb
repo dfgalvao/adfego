@@ -1,25 +1,24 @@
-<p id="notice"><%= notice %></p>
-
     <div class="container">
       <div class="section-title">
-       <br/><br/><br/><br/>
+       <br/><br/><br/><br/><br/>
         <h2>Vagas de Emprego</h2>
         <p>Caso encontre alguma vaga de seu interesse entre em contato conosco.</p>
       </div>
-      
-      <table class="table table-hover">
-        <thead class="thead-dark">
+     
+      <table id="vacancy-datatable" data-source="<%= vacancies_path(format: :json) %>">
+        <thead>
           <tr>
-            <th scope="col">Code</th>
-            <th scope="col">Title</th>
-            <th scope="col">description</th>
-            <th scope="col">Schooling</th>
-            <th scope="col">Quantity</th>
-            <th scope="col">Remuneration</th>
-            <th scope="col">Benefit</th>
-            <th scope="col">Workload</th>
-            <!--<th scope="col">Company</th> -->
+            <th>Code</th>
+            <th>Title</th>
+            <th>description</th>
+            <th>Schooling</th>
+            <th>Quantity</th>
+            <th>Remuneration</th>
+            <th>Benefit</th>
+            <th>Workload</th>
+            <th>Company</th>
           </tr>
+
         </thead>
         <tbody>
           <% @vacancies.each do |vacancy| %>
@@ -32,17 +31,20 @@
               <td><%= vacancy.remuneration %></td>
               <td><%= vacancy.benefit %></td>
               <td><%= vacancy.workload %></td>
-              <!--<td><%= vacancy.company.name %></td>
+              <td><%= vacancy.company.name %></td>
               <td><%= link_to 'Show', vacancy %></td>
               <td><%= link_to 'Edit', edit_vacancy_path(vacancy) %></td>
-              <td><%= link_to 'Destroy', vacancy, method: :delete, data: { confirm: 'Are you sure?' } %></td> -->
+              <td><%= link_to 'Destroy', vacancy, method: :delete, data: { confirm: 'Are you sure?' } %></td>
             </tr>
           <% end %>
         </tbody>
       </table>
-      <!-- <%= link_to 'New Vacancy', new_vacancy_path %> -->
+
+      <%= link_to 'New Vacancy', new_vacancy_path %>
     </div>
 </main>
+
+
 
 
 
