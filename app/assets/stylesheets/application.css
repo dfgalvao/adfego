@@ -19,6 +19,7 @@
  *= require bootstrap-datepicker/dist/css/bootstrap-datepicker.min
  *= require style
  *= require font-awesome
+ *= require dataTables/jquery.dataTables
  *= require_tree .
  *= require_self
  */

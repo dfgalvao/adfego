@@ -5,7 +5,7 @@
         <p>Caso encontre alguma vaga de seu interesse entre em contato conosco.</p>
       </div>
      
-      <table id="vacancy-datatable" data-source="<%= vacancies_path(format: :json) %>">
+      <table id="example" class="display" style="width:100%">
         <thead>
           <tr>
             <th>Code</th>
@@ -16,7 +16,9 @@
             <th>Remuneration</th>
             <th>Benefit</th>
             <th>Workload</th>
-            <th>Company</th>
+            <% if current_user.try(:admin?) %>
+              <th>Company</th>
+            <% end %>
           </tr>
 
         </thead>
@@ -31,20 +33,18 @@
               <td><%= vacancy.remuneration %></td>
               <td><%= vacancy.benefit %></td>
               <td><%= vacancy.workload %></td>
-              <td><%= vacancy.company.name %></td>
-              <td><%= link_to 'Show', vacancy %></td>
-              <td><%= link_to 'Edit', edit_vacancy_path(vacancy) %></td>
-              <td><%= link_to 'Destroy', vacancy, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+              <% if current_user.try(:admin?) %>
+                <td><%= vacancy.company.name %></td>
+                <td><%= link_to 'Show', vacancy %></td>
+                <td><%= link_to 'Edit', edit_vacancy_path(vacancy) %></td>
+                <td><%= link_to 'Destroy', vacancy, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+              <% end %>
             </tr>
           <% end %>
         </tbody>
       </table>
-
-      <%= link_to 'New Vacancy', new_vacancy_path %>
+      <% if current_user.try(:admin?) %>
+        <%= link_to 'New Vacancy', new_vacancy_path %>
+      <% end%>
     </div>
 </main>
-
-
-
-
-

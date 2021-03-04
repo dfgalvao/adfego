@@ -1,0 +1,7 @@
+I"\(function() {
+  jQuery(function() {});
+
+  $('#vacancies').dataTable();
+
+}).call(this);
+:ET

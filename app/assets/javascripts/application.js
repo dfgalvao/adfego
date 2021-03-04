@@ -9,7 +9,6 @@
 //
 // Read Sprockets README (https://github.com/rails/sprockets#sprockets-directives) for details
 // about supported directives.
-//
 //= require rails-ujs
 //= require activestorage
 //= require jquery/dist/jquery
@@ -20,6 +19,8 @@
 //= require counterup/jquery.counterup.min
 //= require owl.carousel/dist/owl.carousel.min
 //= require bootstrap-datepicker/dist/js/bootstrap-datepicker.min
+//= require datatables.net/js/jquery.dataTables
+//= require datatables.net/js/jquery.dataTables.min.js
 //= require main.js
 //= require_tree .
 

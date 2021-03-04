@@ -5,7 +5,7 @@ class VacanciesController < ApplicationController
   # GET /vacancies
   # GET /vacancies.json
   def index
-    @vacancies = Vacancy.all
+    @vacancies = Vacancy.order(id: :desc)
 
   end
 
