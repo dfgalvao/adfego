@@ -1,50 +1,49 @@
-    <div class="container">
-      <div class="section-title">
-       <br/><br/><br/><br/><br/>
-        <h2>Vagas de Emprego</h2>
-        <p>Caso encontre alguma vaga de seu interesse entre em contato conosco.</p>
-      </div>
-     
-      <table id="example" class="display" style="width:100%">
-        <thead>
-          <tr>
-            <th>Code</th>
-            <th>Title</th>
-            <th>description</th>
-            <th>Schooling</th>
-            <th>Quantity</th>
-            <th>Remuneration</th>
-            <th>Benefit</th>
-            <th>Workload</th>
-            <% if current_user.try(:admin?) %>
-              <th>Company</th>
-            <% end %>
-          </tr>
+<br/><br/><br/><br/><br/>
+<div class="container">
+  <div class="section-title">
+    <h2>Vagas de Emprego</h2>
+    <p>Caso encontre alguma vaga de seu interesse entre em contato conosco.</p>
+  </div>
+  
+  <table id="example" class="display" style="width:100%">
+    <thead>
+      <tr>
+        <th>Code</th>
+        <th>Title</th>
+        <th>description</th>
+        <th>Schooling</th>
+        <th>Quantity</th>
+        <th>Remuneration</th>
+        <th>Benefit</th>
+        <th>Workload</th>
+        <% if current_user.try(:admin?) %>
+          <th>Company</th>
+        <% end %>
+      </tr>
 
-        </thead>
-        <tbody>
-          <% @vacancies.each do |vacancy| %>
-            <tr>
-              <td><%= vacancy.code %></td>
-              <td><%= vacancy.title %></td>
-              <td><%= vacancy.description %></td>
-              <td><%= vacancy.schooling %></td>
-              <td><%= vacancy.quantity %></td>
-              <td><%= vacancy.remuneration %></td>
-              <td><%= vacancy.benefit %></td>
-              <td><%= vacancy.workload %></td>
-              <% if current_user.try(:admin?) %>
-                <td><%= vacancy.company.name %></td>
-                <td><%= link_to 'Show', vacancy %></td>
-                <td><%= link_to 'Edit', edit_vacancy_path(vacancy) %></td>
-                <td><%= link_to 'Destroy', vacancy, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-              <% end %>
-            </tr>
+    </thead>
+    <tbody>
+      <% @vacancies.each do |vacancy| %>
+        <tr>
+          <td><%= vacancy.code %></td>
+          <td><%= vacancy.title %></td>
+          <td><%= vacancy.description %></td>
+          <td><%= vacancy.schooling %></td>
+          <td><%= vacancy.quantity %></td>
+          <td><%= vacancy.remuneration %></td>
+          <td><%= vacancy.benefit %></td>
+          <td><%= vacancy.workload %></td>
+          <% if current_user.try(:admin?) %>
+            <td><%= vacancy.company.name %></td>
+            <td><%= link_to 'Show', vacancy %></td>
+            <td><%= link_to 'Edit', edit_vacancy_path(vacancy) %></td>
+            <td><%= link_to 'Destroy', vacancy, method: :delete, data: { confirm: 'Are you sure?' } %></td>
           <% end %>
-        </tbody>
-      </table>
-      <% if current_user.try(:admin?) %>
-        <%= link_to 'New Vacancy', new_vacancy_path %>
-      <% end%>
-    </div>
-</main>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+  <% if current_user.try(:admin?) %>
+    <%= link_to 'New Vacancy', new_vacancy_path %>
+  <% end%>
+</div>

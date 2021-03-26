@@ -1,0 +1,55 @@
+<p id="notice"><%= notice %></p>
+
+<%= form_with(model: preach, local: true) do |form| %>
+  <% if preach.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(preach.errors.count, "error") %> prohibited this preach from being saved:</h2>
+
+      <ul>
+      <% preach.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+    
+  <div class="field">
+    <%= form.label :title %>
+    <%= form.text_field :title %>
+  </div>
+
+  <div class="field">
+    <%= form.label :subject %>
+    <%= form.text_area :subject %>
+  </div>
+
+  <div class="field">
+    <%= form.label :publication %>
+    <%= form.date_select :publication %>
+  </div>
+
+  <div class="field">
+    <%= form.label :status %>
+    <%= form.select(:status, 
+      options_for_select([["Em andamento", "Em andamento"], ["Encerrado", "Encerrado"],["Concluido", "Concluido"]],@preach.status),
+      {include_blank: false}) %>
+  </div>
+
+  <strong>Files:</strong>
+  <ul>
+  <% @preach.files.each do |file| %>
+      <%= link_to file.filename, url_for(file) %>
+      <%= link_to "X", preach_file_upload_path(@preach, file), method: :delete, data: { confirm: "Tem certeza?" } %><br/>
+  <% end %>
+  </ul>
+
+  <div class="field">
+      <%= form.label :files %>
+      <%= form.file_field :files, multiple: true %>
+    </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
+

@@ -1,0 +1,34 @@
+<br/><br/><br/><br/><br/>
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Body:</strong>
+  <%= @progress.body %>
+</p>
+
+<p>
+  <strong>Publication:</strong>
+  <%= @progress.publication %>
+</p>
+
+<p>
+  <strong>Subject:</strong>
+  <%= @progress.subject %>
+</p>
+
+<p>
+  <strong>Status:</strong>
+  <%= @progress.status %>
+</p>
+
+<p>
+  <strong>Preach:</strong>
+  <%= @progress.preach.title %>
+</p>
+
+<p>
+  <%= image_tag @progress.image %>
+</p>
+
+<%= link_to 'Edit', edit_progress_path(@progress) %> |
+<%= link_to 'Back', progresses_path %>

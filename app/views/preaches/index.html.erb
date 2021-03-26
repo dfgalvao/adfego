@@ -1,0 +1,37 @@
+<br/><br/><br/><br/><br/>
+<div class="container">
+  <div class="section-title">
+    <h2>Pregão Eletrônico</h2>
+  </div>
+
+  <table id="example" class="display" style="width:100%">
+    <thead>
+      <tr>
+        <th>Title</th>
+        <th>Subject</th>
+        <th>Publication</th>
+        <th>Status</th>
+        <th colspan="1"></th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <% @preaches.each do |preach| %>
+        <tr>
+          <td><%= preach.title %></td>
+          <td><%= preach.subject %></td>
+          <td><%= preach.publication %></td>
+          <td><%= preach.status %></td>
+          <td><%= link_to 'Show', preach %></td>
+          <% if current_user.try(:admin?) %>
+            <td><%= link_to 'Edit', edit_preach_path(preach) %></td>
+            <td><%= link_to 'Destroy', preach, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+          <% end %>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+  <% if current_user.try(:admin?) %>
+   <%= link_to 'New Preach', new_preach_path %>
+  <% end %>
+</div>

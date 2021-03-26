@@ -1,0 +1,57 @@
+<p id="notice"><%= notice %></p>
+<br/><br/><br/><br/><br/>
+<div class="container">
+  <div class="section-title">
+    <h2>Detalhes do Pregão</h2>
+  </div>
+  <p>
+    <strong>Title:</strong>
+    <%= @preach.title %>
+  </p>
+
+  <p>
+    <strong>Subject:</strong>
+    <%= @preach.subject %>
+  </p>
+
+  <p>
+    <strong>Publication:</strong>
+    <%= @preach.publication %>
+  </p>
+
+   <strong>Files:</strong>
+<ul>
+ <% @preach.files.each do |file| %>
+    <%= link_to file.filename, url_for(file) %><br/>
+ <% end %>
+</ul>
+
+  
+  <table class="table table-borderless">
+  <thead>
+    <tr>
+      <th>Body</th>
+      <th>Publication</th>
+      <th>Subject</th>
+      <th>Status</th>
+      <th>Preach</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @preach.progresses.each do |progress| %>
+      <tr>
+        <td><%= "#{progress.body}" %></td>
+        <td><%= "#{progress.publication}" %></td>
+        <td><%= "#{progress.subject}" %></td>
+        <td><%= "#{getStatus(progress.status)}"%></td>
+        <td><%= "#{progress.preach.title}" %></td>
+      </tr>
+    <% end %>
+  </tbody>
+  </table> 
+  <% if current_user.try(:admin?) %>
+    <%= link_to 'Edit', edit_preach_path(@preach) %>
+  <% end %>
+  <%= link_to 'Back', preaches_path %>
+</div>
