@@ -5,6 +5,8 @@ ruby '2.7.1'
 gem 'mini_magick'
 gem 'jquery-datatables-rails',github: 'rweng/jquery-datatables-rails'
 gem 'jquery-rails'
+# Pagination with kaminari
+gem 'kaminari'
 # font-awesome-rails
 gem 'font-awesome-rails'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'

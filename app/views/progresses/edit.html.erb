@@ -1,6 +1,16 @@
-<h1>Editing Progress</h1>
+<br/><br/><br/><br/><br/>
+<div class="container">
+    <% if current_user.try(:admin?) %>
+        <h1>Editing Progress</h1>
 
-<%= render 'form', progress: @progress %>
+        <%= render 'form', progress: @progress %>
 
-<%= link_to 'Show', @progress %> |
-<%= link_to 'Back', progresses_path %>
+        <%= link_to 'Show', @progress %> |
+        <%= link_to 'Back', progresses_path %>
+    <% else %>
+        <div class="alert alert-danger" role="alert">
+        Recurso Reservado para o Administrador do Sistema: <%= link_to 'fazer login', user_session_path %>
+        </div>
+        <%= link_to 'Back', preaches_path %>
+    <% end %> 
+</div>

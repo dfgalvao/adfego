@@ -1,7 +1,7 @@
 <br/><br/><br/><br/><br/>
 <div class="container">
   <div class="section-title">
-    <h2>Pregão Eletrônico</h2>
+    <h2>Cotação Eletrônica</h2>
   </div>
 
   <table id="example" class="display" style="width:100%">
@@ -32,6 +32,7 @@
     </tbody>
   </table>
   <% if current_user.try(:admin?) %>
-   <%= link_to 'New Preach', new_preach_path %>
+   <%= link_to 'New Preach', new_preach_path %> |
+   <%= link_to 'Go Progresses', progresses_path %>
   <% end %>
 </div>

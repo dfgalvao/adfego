@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   
+  resources :notices
   resources :progresses
   resources :preaches do
     resources :file_uploads, only: [:new, :create, :destroy]

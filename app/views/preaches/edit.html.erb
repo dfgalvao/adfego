@@ -1,9 +1,16 @@
 <br/><br/><br/><br/><br/>
-<div class="container"> 
-    <h1>Editing Preach</h1>
+<div class="container">
+    <% if current_user.try(:admin?) %>
+        <h1>Editing Preaches</h1>
 
-    <%= render 'form', preach: @preach %>
+        <%= render 'form', preach: @preach %>
 
-    <%= link_to 'Show', @preach %> |
-    <%= link_to 'Back', preaches_path %>
+        <%= link_to 'Back', preaches_path %> |
+        <%= link_to 'Show', @prechies %> 
+    <% else %>
+            <div class="alert alert-danger" role="alert">
+            Recurso Reservado para o Administrador do Sistema: <%= link_to 'fazer login', user_session_path %>
+            </div>
+            <%= link_to 'Back', preaches_path %>
+    <% end %> 
 </div>
