@@ -15,17 +15,17 @@
     
   <div class="field">
     <%= form.label :title %>
-    <%= form.text_field :title %>
+    <%= form.text_field :title, class:"form-control" %>
   </div>
 
   <div class="field">
     <%= form.label :subject %>
-    <%= form.text_area :subject %>
+    <%= form.text_area :subject, class:"form-control" %>
   </div>
 
   <div class="field">
     <%= form.label :publication %>
-    <%= form.date_select :publication %>
+    <%= form.date_select :publication, class:"form-control" %>
   </div>
 
   <div class="field">
@@ -35,18 +35,18 @@
       {include_blank: false}) %>
   </div>
 
-  <strong>Files:</strong>
+
   <ul>
   <% @preach.files.each do |file| %>
       <%= link_to file.filename, url_for(file) %>
-      <%= link_to "X", preach_file_upload_path(@preach, file), method: :delete, data: { confirm: "Tem certeza?" } %><br/>
+      <%= link_to "X", preach_file_uploads_preach_path(@preach, file), method: :delete, data: { confirm: "Tem certeza?" } %><br/>
   <% end %>
   </ul>
 
   <div class="field">
       <%= form.label :files %>
       <%= form.file_field :files, multiple: true %>
-    </div>
+  </div>
 
   <div class="actions">
     <%= form.submit %>

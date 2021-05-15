@@ -1,16 +1,22 @@
 <!-- modal -->
 <div id="myModal" class="modal" tabindex="-1">
-  <div class="modal-dialog modal-xl" >
+  <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-xl" >
 
     <div class="modal-content">
-      <div class="modal-header text-center">
-        ...
+      <div class="modal-header mx-auto">
+              
+        <%= image_tag @notice.image %>  
+
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
+          <span aria-hidden="true"></span>
         </button>
       </div>
+      <div class="section-title">
+          <h3><%= @notice.title %></h3>
+          <h5><%= @notice.subtitle%></h5>
+      </div>
       <div class="modal-body">
-        <p>Modal body text goes here.</p>
+        <p><%= @notice.body_of_matter %></p>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>

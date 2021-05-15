@@ -47,7 +47,7 @@
     <% @preach.progresses.each do |progress| %>
       <tr>
         <td><%= "#{progress.body}" %></td>
-        <td><%= "#{progress.publication}" %></td>
+        <td><%= t("#{progress.publication}") %></td>
         <td><%= "#{progress.subject}" %></td>
         <td><%= "#{getStatus(progress.status)}"%></td>
         <td><%= "#{progress.preach.title}" %></td>

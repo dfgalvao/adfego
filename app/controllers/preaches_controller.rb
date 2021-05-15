@@ -52,10 +52,15 @@ class PreachesController < ApplicationController
 
   # DELETE /preaches/1 or /preaches/1.json
   def destroy
-    @preach.destroy
-    respond_to do |format|
-      format.html { redirect_to preaches_url, notice: "Preach was successfully destroyed." }
-      format.json { head :no_content }
+   if @preach.destroy
+      respond_to do |format|
+        format.html { redirect_to preaches_url, notice: "Preach was successfully destroyed." }
+        format.json { head :no_content }
+      end
+    else
+      respond_to do |format|
+        format.html { redirect_to preaches_url, notice: "Can't be destroyed while progresses exist"}
+      end
     end
   end
 

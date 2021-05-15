@@ -1,0 +1,5 @@
+<%= form_with model: @notice, url: notice_file_uploads_notice_path(@notice),
+              method: :post, local: true do |f| %>
+  <%= f.file_field :image %><br /><br />
+  <%= f.submit 'Upload' %>
+<% end %>
