@@ -3,10 +3,20 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '2.7.1'
 gem 'mini_magick'
+
 gem 'rails-i18n'
+
 gem 'rails_admin-i18n'
+
 gem 'jquery-datatables-rails',github: 'rweng/jquery-datatables-rails'
 gem 'jquery-rails'
+
+gem 'actiontext',github: 'kobaltz/actiontext', branch:'archive', require:'action_text'
+gem 'image_processing','~>1.2'
+gem 'webpacker'
+
+
+
 # Pagination with kaminari
 gem 'kaminari'
 # font-awesome-rails

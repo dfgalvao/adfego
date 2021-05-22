@@ -24,3 +24,4 @@
 //= require main.js
 //= require_tree .
 
+import"actiontext"

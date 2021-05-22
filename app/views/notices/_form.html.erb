@@ -11,6 +11,19 @@
     </div>
   <% end %>
 
+  <strong>Capa</strong>
+    <div class="field">
+      <%= form.label :files %>
+      <%= form.file_field :files, multiple: true %>
+  </div>
+
+  <ul>
+  <% @notice.files.each do |file| %>
+      <%= link_to file.filename, url_for(file) %>
+      <%= link_to "X", notice_file_uploads_notice_path(@notice, file), method: :delete, data: { confirm: "Tem certeza?" } %><br/>
+  <% end %>
+  </ul>
+  
   <div class="field">
     <%= form.label :title %>
     <%= form.text_area :title %>
@@ -22,8 +35,8 @@
   </div>
 
   <div class="field">
-    <%= form.label :body_of_matter %>
-    <%= form.text_area :body_of_matter %>
+    <%= form.label :content %>
+    <%= form.rich_text_area :content %>
   </div>
 
   <div class="field">
@@ -31,12 +44,7 @@
     <%= form.date_select :publication %>
   </div>
 
-  <div class="field">
-      <%= form.label :image %>
-      <%= form.file_field :image %>
-  </div>
-
-  
+ 
   <div class="actions">
     <%= form.submit %>
   </div>
